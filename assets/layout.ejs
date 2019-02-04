@@ -190,10 +190,10 @@
         </tr>
         <tr class="cp h12 At rBb">
 			<td><%= boleto['cedente'] %></td>
-			<td><%= boleto['agencia'] %>/<%= boleto['codigo_cedente'] %></td>
+			<td><%= addTrailingZeros(boleto['agencia'], 4) %>-<%= boleto['digito_agencia'] %>/<%= boleto['codigo_cedente'] %>-<%= boleto['digito_conta'] %></td>
             <td>R$</td>
             <td></td>
-			<td class="Ar"><%= addTrailingZeros(boleto['nosso_numero'], 12) %>-<%= boleto['nosso_numero_dv'] %></td>
+			<td class="Ar"><%= boleto['carteira'] %>/<%= addTrailingZeros(boleto['nosso_numero'], 11) %>-<%= boleto['nosso_numero_dv'] %></td>
         </tr>
     </table><table class="w666">
         <tr class="ct h13">
@@ -273,7 +273,7 @@
         </tr>
         <tr class="cp h12 rBb">
 			<td><%= boleto['cedente'] %></td>
-			<td class="Ar"><%= boleto['agencia'] %>/<%= boleto['codigo_cedente'] %></td>
+            <td class="Ar"><%= addTrailingZeros(boleto['agencia'], 4) %>-<%= boleto['digito_agencia'] %>/<%= boleto['codigo_cedente'] %>-<%= boleto['digito_conta'] %></td>
         </tr>
     </table><table class="w666">
         <tr class="ct h13">
@@ -290,7 +290,7 @@
             <td>DM</td>
             <td>N</td>
 			<td><%= formatDate(boleto['data_emissao']) %></td>
-			<td class="Ar"><%= addTrailingZeros(boleto['nosso_numero'], 12) %>-<%= boleto['nosso_numero_dv'] %></td>
+			<td class="Ar"><%= boleto['carteira'] %>/<%= addTrailingZeros(boleto['nosso_numero'], 11) %>-<%= boleto['nosso_numero_dv'] %></td>
         </tr>
     </table><table class="w666">
         <tr class="ct h13">
