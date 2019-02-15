@@ -273,7 +273,7 @@
         </tr>
         <tr class="cp h12 rBb">
 			<td><%= boleto['cedente'] %></td>
-            <td class="Ar"><%= addTrailingZeros(boleto['agencia'], 4) %>-<%= boleto['digito_agencia'] %>/<%= boleto['codigo_cedente'] %>-<%= boleto['digito_conta'] %></td>
+            <td class="Ar"><%= addTrailingZeros(boleto['agencia'], 4) %>-<%= boleto['digito_agencia'] %>/<%= addTrailingZeros(boleto['codigo_cedente'], 7) %>-<%= boleto['digito_conta'] %></td>
         </tr>
     </table><table class="w666">
         <tr class="ct h13">
